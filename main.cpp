@@ -1,16 +1,18 @@
-#include <iostream>
-#include <Windows.h>
+#include <stdio.h>
 
+
+template<typename Type>
+Type add(Type a, Type b) {
+	return static_cast<Type>(a + b);
+
+
+}
 
 int main() {
 
-	SetConsoleOutputCP(65001);
-
-	char str[] = "にく";
-
-	printf("%s", str);
+	printf("%d\n", add<int>(114, 514));
+	printf("%d\n", add<float>(11.4f, 51.4f));
 
 	return 0;
-
 
 }
