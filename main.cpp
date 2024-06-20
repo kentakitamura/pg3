@@ -3,13 +3,13 @@
 int Recursive1(int kyuuryou, int zikan, int kotei) {
 	if (kyuuryou >= kotei) {
 		printf("%d時間後に超える", zikan);
-
+		
 		return zikan;
 	}
 	printf("%d　%d\n", kyuuryou, kotei);
 	kyuuryou += kyuuryou *2 - 50;
 
-	return (Recursive1(kyuuryou, ++zikan, kotei *2));
+	return Recursive1(kyuuryou, ++zikan, kotei *2);
 }
 
 int main() {
