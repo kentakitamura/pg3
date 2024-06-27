@@ -35,11 +35,20 @@ void MyClass::Update() {
 
 	// 関数ポインタのテーブルから関数を実行
 	(this->*table[index])();
+	int kazu;
 
-	if (/*スペース押された？*/) {
-		/*敵の状態（関数ポインタ配列のインデックス）を+1*/
-		/*インデックスが配列の最後の要素なら他の値を入れる*/
+	puts("次の行動へ");
+	scanf_s("%d", &kazu);
+
+	if (kazu ==0)
+	{
+		index++;
+		if (index > 2)
+			index = 0;
+
+		
 	}
+	
 }
 
 // staticで宣言したメンバ関数ポインタテーブルの実体
@@ -53,7 +62,11 @@ void (MyClass::* MyClass::table[])() = {
 int main()
 {
 	MyClass my;
-
-	my.Update();
+	while (1)
+	{
+		my.Update();
+	}
+	
 
 	return 0;
+}
