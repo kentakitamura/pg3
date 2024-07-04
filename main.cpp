@@ -3,7 +3,7 @@
 class oya
 {
 public:
-	 void Voice() {
+	virtual void Voice() {
 		printf("あにまる¥n");
 	};
 };
