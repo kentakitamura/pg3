@@ -3,8 +3,8 @@
 class zukei
 {
 public:
-	virtual void aa() = 0;
-	virtual void aa() = 0;
+	virtual void Size() = 0;
+	virtual void Draw() = 0;
 
 protected:
 	float size;
@@ -35,7 +35,7 @@ void en::Size()
 }
 
 
-void sikau::Size()
+void sikaku::Size()
 {
 	radius = 5.0f;
 	printf("矩形の半径 %f\n", radius);
@@ -44,7 +44,7 @@ void sikau::Size()
 
 int main(void) {
 
-	zukei *ishape[2] = { new en ,new sikaku };
+	zukei* ishape[2] = { new en ,new sikaku };
 
 	ishape[0]->Size();
 	ishape[1]->Size();
@@ -56,3 +56,4 @@ int main(void) {
 	delete ishape[1];
 
 	return 0;
+}
